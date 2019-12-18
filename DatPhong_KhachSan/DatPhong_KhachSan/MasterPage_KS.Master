@@ -1,0 +1,154 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage_KS.master.cs" Inherits="DatPhong_KhachSan.MasterPage_KS" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="hinh/Icon_House.png" type="image/x-icon">
+  <title>House of Smiles</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+    <link href="css/Style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--====== LOADER =====-->
+        <div class="loader"></div>
+   <form id="formMain" runat="server">
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <asp:ImageButton ID="img_backhome" runat="server" ImageUrl="hinh/NameWeb.png" OnClick="img_backhome_Click" />      
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <asp:HyperLink ID="link_dangnhap" runat="server" class="nav-link" NavigateUrl="~/DangNhap.aspx">
+                  Đăng Nhập
+              </asp:HyperLink>
+          </li>
+          <li class="nav-item">
+              <asp:HyperLink ID="link_dangky" runat="server" class="nav-link" NavigateUrl="~/DangKy.aspx">
+                  Đăng Ký
+              </asp:HyperLink>
+          </li>
+            <li class="nav-item">             
+                <div class="btn-group mr-1 mb-1">
+                    <asp:Label ID="lb_nguoidung" runat="server" class="btn btn-min-width nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></asp:Label>                    
+                    <div class="dropdown-menu">
+                        <asp:HyperLink ID="btngiohang" class="dropdown-item" NavigateUrl="~/GioHang.aspx" runat="server">Giỏ Hàng</asp:HyperLink>
+                        <asp:HyperLink ID="btnlichdat" runat="server" class="dropdown-item" NavigateUrl="~/LichDatPhong.aspx">Lịch Đặt Phòng</asp:HyperLink>
+                        <asp:HyperLink ID="btndoimatkhau" runat="server" class="dropdown-item" NavigateUrl="~/DoiMatKhau.aspx">Đổi mật khẩu</asp:HyperLink>
+                        <asp:HyperLink ID="btntaikhoan" runat="server" class="dropdown-item" NavigateUrl="~/ThongTinTaiKhoan.aspx">Thông tin tài khoản</asp:HyperLink>                        
+                        <div class="dropdown-divider"></div>
+                        <asp:Button ID="Button1" runat="server" CssClass="dropdown-item" Text="Đăng Xuất" OnClick="btnDangXuat_Click" />
+                    </div>
+                </div>
+                <!-- /btn-group -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!--Nội dung hiển thị -->
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>   
+
+<!--======================= FOOTER =======================-->
+	<footer>
+       
+		<div class="" style="background:#bfffb6">
+            <div class="w-100">
+            <div>
+                <hr/>
+              <h4 style="margin-left:10rem">Các khu vực khác</h4>
+            </div>
+
+		<div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+
+			</div><!-- end columns -->
+
+			<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+				<ul class="list-unstyled">
+                    <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Trang_ChiTietKhuVuc.aspx?khuvuc=BinhDinh">Bình Định</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Trang_ChiTietKhuVuc.aspx?khuvuc=CanTho">Cần Thơ</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Trang_ChiTietKhuVuc.aspx?khuvuc=DienBien">Điện Biên</asp:HyperLink></li>  
+                    <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Trang_ChiTietKhuVuc.aspx?khuvuc=DongNai">Đồng Nai</asp:HyperLink></li>  
+                    <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Trang_ChiTietKhuVuc.aspx?khuvuc=KhanhHoa">Khánh Hòa</asp:HyperLink></li>  
+                    <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Trang_ChiTietKhuVuc.aspx?khuvuc=LamDong">Lâm Đồng</asp:HyperLink></li>           
+				</ul>
+			</div><!-- end columns -->
+
+			<div class="col-xs-12 col-sm-6 col-md-2 col-lg-3">
+				<ul class="list-unstyled">
+                    <li><a href="#">Lạng Sơn</a></li>
+                    <li><a href="#">Nghệ An</a></li>
+					<li><a href="#">Ninh Bình</a></li>
+					<li><a href="#">Phú Yên</a></li>
+					<li><a href="#">Quảng Bình</a></li>
+					<li><a href="#">Quảng Trị</a></li>			
+				</ul>
+			</div><!-- end columns -->
+
+			<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 ">				
+				<ul class="list-unstyled">
+                    <li><a href="#">Thái Nguyên</a></li>
+                    <li><a href="#">Thanh Hóa</a></li>
+                    <li><a href="#">Vinh</a></li>
+                    <li><a href="#">Hòa Bình</a></li>
+                    <li><a href="#">An Giang</a></li>
+                    <li><a href="#">Tiền Giang</a></li>        
+				</ul>
+			</div><!-- end columns -->	
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-3">            
+                <ul class="list-unstyled">
+                    <li><a href="#">Gia Lai</a></li>
+                    <li><a href="#">Sơn La</a></li>
+                    <li><a href="#">Bắc Ninh</a></li>
+                    <li><a href="#">Ninh Thuận</a></li>
+                    <li><a href="#">Vũng Tàu</a></li>
+                    <li><a href="#">Bến Tre</a></li>
+                </ul>
+            </div><!-- end columns -->  			
+		  </div><!-- end row -->
+        </div>
+		</div><!-- end footer-top -->
+
+		<div class="bg-dark" style="height:100px; padding:2rem;">
+            <center>
+			<div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <h5>Email: hiepphamhufi@gmail.com</h5>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <h5>Hotline: 0363809931</h5>
+                </div>
+			</div>
+            </center>
+		</div><!-- end footer-bottom -->
+	 </footer><!-- end footer -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="js/custom-navigation.js"></script>
+        </form>
+    <%--Tư vấn online--%>
+    <script src="https://uhchat.net/code.php?f=d6df83"></script>
+</body>
+
+</html>
+

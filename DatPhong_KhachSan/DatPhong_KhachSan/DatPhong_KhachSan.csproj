@@ -1,0 +1,794 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1550D501-05C3-4A15-AAC3-F8E8006F20F9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DatPhong_KhachSan</RootNamespace>
+    <AssemblyName>DatPhong_KhachSan</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="booking\css\main.css" />
+    <Content Include="booking\images\bg-img-03.jpg" />
+    <Content Include="booking\js\global.js" />
+    <Content Include="booking\vendor\bootstrap-wizard\bootstrap.min.js" />
+    <Content Include="booking\vendor\bootstrap-wizard\jquery.bootstrap.wizard.js" />
+    <Content Include="booking\vendor\bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="booking\vendor\datepicker\daterangepicker.css" />
+    <Content Include="booking\vendor\datepicker\daterangepicker.js" />
+    <Content Include="booking\vendor\datepicker\moment.min.js" />
+    <Content Include="booking\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="booking\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="booking\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="booking\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="booking\vendor\jquery-validate\jquery.validate.js" />
+    <Content Include="booking\vendor\jquery-validate\jquery.validate.min.js" />
+    <Content Include="booking\vendor\jquery\jquery.js" />
+    <Content Include="booking\vendor\jquery\jquery.min.js" />
+    <Content Include="booking\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="booking\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="booking\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="booking\vendor\select2\select2.min.css" />
+    <Content Include="booking\vendor\select2\select2.min.js" />
+    <Content Include="CapNhat_DatPhong.aspx" />
+    <Content Include="css\datepicker.css" />
+    <Content Include="css\modern-business.css" />
+    <Content Include="css\Style.css" />
+    <Content Include="DangKy.aspx" />
+    <Content Include="DangNhap.aspx" />
+    <Content Include="DatPhongKS.aspx" />
+    <Content Include="DoiMatKhau.aspx" />
+    <Content Include="GioHang.aspx" />
+    <Content Include="hinh\04D0339CCAFF43B88383_38286724.jpg" />
+    <Content Include="hinh\05FE62D927FC44A78C3A_31554419.jpg" />
+    <Content Include="hinh\0A9DB1AB744B4754B9B0_21089106.jpg" />
+    <Content Include="hinh\0ABE30A4FDD044CF9671_58350744.jpg" />
+    <Content Include="hinh\1.jpg" />
+    <Content Include="hinh\10.jpg" />
+    <Content Include="hinh\10402_1499772014_100558374.jpg" />
+    <Content Include="hinh\10485_1499930749_103525371.jpg" />
+    <Content Include="hinh\10532_1499940938_102977418.jpg" />
+    <Content Include="hinh\10598_1500005442_104326617.jpg" />
+    <Content Include="hinh\10609_1500006854_104813283.jpg" />
+    <Content Include="hinh\10795_1500613353_34122936.jpg" />
+    <Content Include="hinh\10839_1541600296_img_8136.jpg" />
+    <Content Include="hinh\10952_1568293298_d23fc82fab1c4c42150d.jpg" />
+    <Content Include="hinh\10991_1503572410_110547679.jpg" />
+    <Content Include="hinh\11.jpg" />
+    <Content Include="hinh\11352_1516791417_122328245.jpg" />
+    <Content Include="hinh\11353_1528883811_chọn_4.jpg" />
+    <Content Include="hinh\11369_1528169733_117654033.jpg" />
+    <Content Include="hinh\11392_1513140044_23905187_878364665663702_6256047822678722362_n.jpg" />
+    <Content Include="hinh\11466_1518424981_deluxe_double_2.jpg" />
+    <Content Include="hinh\11467_1514879647_116276778.jpg" />
+    <Content Include="hinh\11489_1515149314_114149191.jpg" />
+    <Content Include="hinh\11648_1525508337_room_c5.jpg" />
+    <Content Include="hinh\11650_1519780159_3c9c8348.jpg" />
+    <Content Include="hinh\11661_1534911325_vunp7997_hdr.jpg" />
+    <Content Include="hinh\11689_1543460261__d7a7856-hdr.jpg" />
+    <Content Include="hinh\11752_1522227083_03.jpg" />
+    <Content Include="hinh\11783Cầu-Vàng-tại-Đà-Nẵng-gây-ấn-tượng-mạnh-với-truyền-thông-quốc-tế.-ẢNH-1.jpg" />
+    <Content Include="hinh\11820_1523153431_img_8408_1.jpg" />
+    <Content Include="hinh\11822_1533117707_lobby_%284%29.jpg" />
+    <Content Include="hinh\11838_1527561838__img0261.jpg" />
+    <Content Include="hinh\11E8DC0373CE4FDE8FE2_91788473.jpg" />
+    <Content Include="hinh\12.jpg" />
+    <Content Include="hinh\12080_1540191206_senior_sea_3.jpg" />
+    <Content Include="hinh\12442_1527740439_1516711987267.jpg" />
+    <Content Include="hinh\12452_1527563408_131048488.jpg" />
+    <Content Include="hinh\12493_1569833326_dc6d9626369dd1c3888c.jpg" />
+    <Content Include="hinh\12588_1529398552_jjjjjjjjjjjjjjjj.jpg" />
+    <Content Include="hinh\12677_1532597763_cong_chinh.jpeg" />
+    <Content Include="hinh\12720_1540950586_9.jpg" />
+    <Content Include="hinh\13.jpg" />
+    <Content Include="hinh\14.jpg" />
+    <Content Include="hinh\15.jpg" />
+    <Content Include="hinh\15176_1555553023_138401262.jpg" />
+    <Content Include="hinh\1544000586_1.jpg" />
+    <Content Include="hinh\16.jpg" />
+    <Content Include="hinh\1660_1505917594_64559494.jpg" />
+    <Content Include="hinh\17.jpg" />
+    <Content Include="hinh\18.jpg" />
+    <Content Include="hinh\19.jpg" />
+    <Content Include="hinh\2.jpg" />
+    <Content Include="hinh\20.jpg" />
+    <Content Include="hinh\21.jpg" />
+    <Content Include="hinh\22.jpg" />
+    <Content Include="hinh\23.jpg" />
+    <Content Include="hinh\24.jpg" />
+    <Content Include="hinh\25.jpg" />
+    <Content Include="hinh\26.jpg" />
+    <Content Include="hinh\2695_1559872989_46846062_2170783413139878_6029249547954290688_n.jpg" />
+    <Content Include="hinh\27.jpg" />
+    <Content Include="hinh\283_1547256265_pool.jpg" />
+    <Content Include="hinh\3.jpg" />
+    <Content Include="hinh\3.png" />
+    <Content Include="hinh\3075_1461051311286_7.jpg" />
+    <Content Include="hinh\319367E61C64431B8B2C_31655952.jpg" />
+    <Content Include="hinh\32306_1559186510_1-ancora-cruises-overview-3.jpg" />
+    <Content Include="hinh\3239B3A5F32D4E368E7F_53416442.jpg" />
+    <Content Include="hinh\3298_1540482587_dsc04463.jpg" />
+    <Content Include="hinh\3401_1521768149_superior-room--v7426806.jpg" />
+    <Content Include="hinh\359CBD7902FA45DFA198_65788065.jpg" />
+    <Content Include="hinh\3DAB12A8051E41B4AF32_95630431.jpg" />
+    <Content Include="hinh\4.jpg" />
+    <Content Include="hinh\40842651024_9314e8962f_b.jpg" />
+    <Content Include="hinh\41BE39B4A38645DC94A5_65535978.jpg" />
+    <Content Include="hinh\45491_1538553088_bungalow-view-2.jpg" />
+    <Content Include="hinh\45557_1537428695_1ab.jpg" />
+    <Content Include="hinh\46864_1539229653_dsc_0780.jpg" />
+    <Content Include="hinh\47429_1542621182__dsc1333-2.jpg" />
+    <Content Include="hinh\477D44649D4D4A20B2C1_60256581.jpg" />
+    <Content Include="hinh\480_1523584210__mg_7040..jpg" />
+    <Content Include="hinh\5.jpg" />
+    <Content Include="hinh\51EA916CAE644DC8A1AB_79372126.jpg" />
+    <Content Include="hinh\5215CFD9C21C492BABE9_19992938.jpg" />
+    <Content Include="hinh\52382_1541717861_img_7229_%281%29.jpg" />
+    <Content Include="hinh\52959_1542361906_166379965.jpg" />
+    <Content Include="hinh\53555_1558155297_deluxe_room_1-min.jpg" />
+    <Content Include="hinh\54178_1545724520_dsc_8988-hdr.jpg" />
+    <Content Include="hinh\5486_1528248462_03.jpg" />
+    <Content Include="hinh\54AFBB68B5C847539A55_20083713.jpg" />
+    <Content Include="hinh\55682_1545633783_59e533706e588d06d449.jpg" />
+    <Content Include="hinh\56665_1547603446_rs_vip_3-1.jpg" />
+    <Content Include="hinh\57491_1548920912__n5_6930.jpg" />
+    <Content Include="hinh\57759_1549939011_le_tan_1_resize.jpg" />
+    <Content Include="hinh\580_1537864840_dsc_7323-hdr_%28copy%29.jpg" />
+    <Content Include="hinh\58111_1550653344_dscf6321%281%29.jpg" />
+    <Content Include="hinh\58C696ED71EB4FDFA80C_70182471.jpg" />
+    <Content Include="hinh\59289_1551927252_fam_3.jpg" />
+    <Content Include="hinh\5C23BBC4FDBF4DB1BB09_13793890.jpg" />
+    <Content Include="hinh\6.jpg" />
+    <Content Include="hinh\6026_1545389640_overview_%282%29.jpg" />
+    <Content Include="hinh\611787_1574161757_anh_nen.jpg" />
+    <Content Include="hinh\611817_1574403214_216623605.jpg" />
+    <Content Include="hinh\61943_1553248317_img_3181.jpg" />
+    <Content Include="hinh\62160_1553239470_157760679.jpg" />
+    <Content Include="hinh\62968_1557042769_night-marinabay-resort_%284%29.jpg" />
+    <Content Include="hinh\63883_1556162959_super_room_205_%283%29.jpg" />
+    <Content Include="hinh\63AE85CC789D4764A0A4_44169359.jpg" />
+    <Content Include="hinh\64962_1557455918_9f0d5506dc1d3943600c.jpg" />
+    <Content Include="hinh\65253_1557992626_279a1086.jpg" />
+    <Content Include="hinh\65339_1558714632_188548101.jpg" />
+    <Content Include="hinh\6638_1470888092679_74402661.jpg" />
+    <Content Include="hinh\67851_1561440652_grandsuite_%287%29.jpg" />
+    <Content Include="hinh\68467_1564573818_suite_bay_view_qvd06957-hdr.jpg" />
+    <Content Include="hinh\68829_1562042051_img_0958.jpg" />
+    <Content Include="hinh\68996_1562253401_img_1274.jpg" />
+    <Content Include="hinh\69307_1562581729_64329286_868279223537632_1910416206473461760_n.jpg" />
+    <Content Include="hinh\693_1542620077_main_photo_-_lap_pool.jpg" />
+    <Content Include="hinh\69601_1565062735_dii02421.jpg" />
+    <Content Include="hinh\6CC2F38F66144732BFFA_11096829.jpg" />
+    <Content Include="hinh\7.jpg" />
+    <Content Include="hinh\70363_1575123579_252418a95c78ba26e369.jpg" />
+    <Content Include="hinh\70364_1566188843_4a7208712d01c95f9010.jpg" />
+    <Content Include="hinh\70513_1567738610_vntrip2.jpg" />
+    <Content Include="hinh\71857_1568909605_20190827_112613_hdr.jpg" />
+    <Content Include="hinh\72119_1569998151_158858174.jpg" />
+    <Content Include="hinh\72358_1571211284_111822803.jpg" />
+    <Content Include="hinh\72F1B2B396844B419CB9_36005556.jpg" />
+    <Content Include="hinh\7477_1488766388_84601671.jpg" />
+    <Content Include="hinh\7489_1557461246_189682674.jpg" />
+    <Content Include="hinh\7499_1537410287_41934103_2047040192274202_4045479693816692736_n.jpg" />
+    <Content Include="hinh\7608_1571372671_1.jpg" />
+    <Content Include="hinh\761_1531121007_dbl_s.dlx.jpg" />
+    <Content Include="hinh\7859_1495094668_mx2a1283_hdr.jpg" />
+    <Content Include="hinh\7933_1510111350_1270625_16072216040044867516.jpg" />
+    <Content Include="hinh\8.jpg" />
+    <Content Include="hinh\8109_1524457647__mg_0720.jpg" />
+    <Content Include="hinh\8223_1540786911_6.jpg" />
+    <Content Include="hinh\8332_1545033220_poseidon_lobby_%289%29_compressed.jpg" />
+    <Content Include="hinh\8358_1477471552_80884363.jpg" />
+    <Content Include="hinh\8469_1484624254_1603126_16102110370047997481.jpg" />
+    <Content Include="hinh\863_1512643133_sup_twin_1-3.jpg" />
+    <Content Include="hinh\8777_1486980611_80226503.jpg" />
+    <Content Include="hinh\8817_1551321447_p2_%285%29coppy.jpeg" />
+    <Content Include="hinh\8918_1500544969_78721610.jpg" />
+    <Content Include="hinh\8A0664BB174F4B2E8C98_72411337.jpg" />
+    <Content Include="hinh\9.jpg" />
+    <Content Include="hinh\9059_1487240766_87117513.jpg" />
+    <Content Include="hinh\911B4284B93844BE9E5E_55838330.jpg" />
+    <Content Include="hinh\920_1515203423_^5e29407a9ed50c2bdbc5d2cb5164a0a42fe686fbd1a3aaceb3^pimgpsh_fullsize_distr.jpg" />
+    <Content Include="hinh\9393_1495770736_img_4929_copy.jpg" />
+    <Content Include="hinh\9394_1557224834_1503.jpg" />
+    <Content Include="hinh\9464D08E70254B619A59_22033777.jpg" />
+    <Content Include="hinh\9509_1548384903_img_1126.jpg" />
+    <Content Include="hinh\958B2FC82A4B493BBF0C_76184818.jpg" />
+    <Content Include="hinh\9606_1533703877_nepn9719_hdr_%28copy%29.jpg" />
+    <Content Include="hinh\9636_1516352649__duy3485_%28copy%29.jpg" />
+    <Content Include="hinh\9640_1498467383_97885216.jpg" />
+    <Content Include="hinh\9680_1502362584_rom_casa_hotel_da_nang_view_5.jpg" />
+    <Content Include="hinh\9716_1498721492_100459815.jpg" />
+    <Content Include="hinh\9774_1498898867_89520148.jpg" />
+    <Content Include="hinh\9894_1499165206_31.jpg" />
+    <Content Include="hinh\9964_1546852745_dji_0344.jpg" />
+    <Content Include="hinh\9B6E808A821F4A1B874A_39315134.jpg" />
+    <Content Include="hinh\9B84BADCF83B47DEA326_37881428.jpg" />
+    <Content Include="hinh\9CD7428FF2B246169F05_64391038.jpg" />
+    <Content Include="hinh\A28123A0DBA54A55B6EA_43345033.jpg" />
+    <Content Include="hinh\A299306B334C4DD2908B_72329869.jpg" />
+    <Content Include="hinh\ACD1841845E14B05A198_65822431.jpg" />
+    <Content Include="hinh\Atrium Hanoi Hotel.jpg" />
+    <Content Include="hinh\Atrium HanoiHotel.jpg" />
+    <Content Include="hinh\AtriumHanoi Hotel.jpg" />
+    <Content Include="hinh\BEC612E0F2954D0D96C3_39589798.jpg" />
+    <Content Include="hinh\C6C24F15A94640C49FFE_71492749.jpg" />
+    <Content Include="hinh\D5D11773DCAC4F3A9A1F_65541620.jpg" />
+    <Content Include="hinh\D7622629914E40E1AC8B_76848200.jpg" />
+    <Content Include="hinh\E5579B7792804110803D_9254434.jpg" />
+    <Content Include="hinh\E7A4B37C56CB4C4DBAEA_31554386.jpg" />
+    <Content Include="hinh\ED14C03B8050400995CE_61561641.jpg" />
+    <Content Include="hinh\F82487E0D76D41B6BB36_41033050.jpg" />
+    <Content Include="hinh\icon-spa.png" />
+    <Content Include="hinh\icon\giohang.png" />
+    <Content Include="hinh\Hanoi Eternity Hotel.jpg" />
+    <Content Include="hinh\Hanoi Eternity-Hotel.jpg" />
+    <Content Include="hinh\Hanoi EternityHotel.jpg" />
+    <Content Include="hinh\Hanoi Eternity_Hotel.jpg" />
+    <Content Include="hinh\hcm.png" />
+    <Content Include="hinh\headphone.png" />
+    <Content Include="hinh\Hinh_WebForm\da nang\10.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\11.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\12.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\13.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\14.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\15.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\16.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\17.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\18.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\19.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\20.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\21.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\22.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\23.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\24.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\25.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\26.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\27.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\7.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\8.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\9.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Babylon Villa_.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Green Star Central Hotel_ .jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Green Star CentralHotel .jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Green StarCentral Hotel .jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Hoa Cọ Villas..jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Hoa CọVillas.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\HT VILLAGE VILLA .jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\HT VILLAGE_VILLA.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn Cosmos ĐàNẵng 2p.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn Cosmos ĐàNẵng.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\KHÁCH SẠN DANA MARINA ĐÀ NẴNG.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\KHÁCH SẠN DANA MARINA ĐÀNẴNG.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\KHÁCH SẠN DANAMARINA ĐÀ NẴNG.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn GoldBoutique.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn Golden Rose ĐàNẵng.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn Hà Nội Blue ĐàNẵng.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn Hà NộiBlue Đà Nẵng.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn Park View Saigon Hotel.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn TRIIP Lê Hân Đại Nam.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn TRIIP Lê Hân ĐạiNam.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn TRIIP Lê Hân. Đại Nam.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn Tuấn Phong.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn TuấnPhong.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn Victory.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạnVictory.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Khách sạn_Victory.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\nhatam,.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Pho Hoi 1 Hotel.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Pho Hoi 1 Hotel_.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Pho Hoi 1Hotel.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Phu Thinh Boutique Resort  Spa.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Phu Thinh Boutique Resort &amp;Spa.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Phu Thinh Boutique Resort_Spa.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Saigon Night Hotel.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Saigon NightHotel.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Symphony .Hotel.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Symphony Hotel..jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Symphony Hotel.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Symphony. Hotel.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Vinh Hung LibraryHotel.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\Vinh Hung Library_Hotel.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\White Sand Hotel &amp; Apartment.jpg" />
+    <Content Include="hinh\Hinh_WebForm\da nang\White Sand Hotel&amp; Apartment.jpg" />
+    <Content Include="hinh\Hinh_WebForm\hcm\Khách sạn Queen Ann...jpg" />
+    <Content Include="hinh\Hinh_WebForm\hcm\Khách sạn Queen Ann..jpg" />
+    <Content Include="hinh\Hinh_WebForm\hcm\Khách sạn Queen Ann.jpg" />
+    <Content Include="hinh\Hinh_WebForm\hcm\Khách sạn Queen Ann_.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Cicilia Nha Trang Hotel&amp; Spa.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Cicilia Nha Trang Hotels &amp; Spa..jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Cicilia Nha Trang Hotels &amp; Spa.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Cicilia Nha Trang Hotels &amp; Spa2.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Cicilia Nha TrangHotels &amp; Spa.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Cicilia Nha TrangHotels&amp; Spa.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Khách sạn Carina Nha .Trang.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Khách sạn Carina NhaTrang.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Khách sạn Carina Nha_Trang.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Khách sạn Meriton...jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Khách sạn Meriton.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Khách sạn MeritonKhách sạn Meriton.1.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Khách sạn Queen  Nha Trang.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Khách sạn Queen 1 Nha Trang.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Khách sạn Queen 1 NhaTrang.jpg" />
+    <Content Include="hinh\Hinh_WebForm\nhatrang\Khách sạn Queen 1Nha Trang.jpg" />
+    <Content Include="hinh\hoi-an-ve-dem-1.gif" />
+    <Content Include="hinh\Honeymoon Hotel .jpg" />
+    <Content Include="hinh\HoneymoonHotel .jpg" />
+    <Content Include="hinh\Honeymoon_Hotel .jpg" />
+    <Content Include="hinh\icon\house.png" />
+    <Content Include="hinh\icon\mail.png" />
+    <Content Include="hinh\icon\phone.png" />
+    <Content Include="hinh\icon_baidoxe.png" />
+    <Content Include="hinh\icon_banui.png" />
+    <Content Include="hinh\icon_beboi.png" />
+    <Content Include="hinh\Icon_House.png" />
+    <Content Include="hinh\icon_nhahang.png" />
+    <Content Include="hinh\image_slide1.png" />
+    <Content Include="hinh\image_slide2.png" />
+    <Content Include="hinh\image_slide3.png" />
+    <Content Include="hinh\ISTAY Hotel.jpg" />
+    <Content Include="hinh\ISTAY-Hotel.jpg" />
+    <Content Include="hinh\ISTAYHotel.jpg" />
+    <Content Include="hinh\ISTAY_Hotel.jpg" />
+    <Content Include="hinh\Khách sạn Golden Silk Boutique.jpg" />
+    <Content Include="hinh\Khách sạn Golden SilkBoutique.jpg" />
+    <Content Include="hinh\Khách sạn Mỹ Lan Hà Nội.jpg" />
+    <Content Include="hinh\Khách sạn Mỹ LanHà Nội.jpg" />
+    <Content Include="hinh\Khách sạn MỹLan Hà Nội.jpg" />
+    <Content Include="hinh\loader-orange.gif" />
+    <Content Include="hinh\Millennium Hanoi Hotel.jpg" />
+    <Content Include="hinh\Millennium HanoiHotel.jpg" />
+    <Content Include="hinh\NameWeb.png" />
+    <Content Include="hinh\ngamhalongvedepantuongcuatop7kyquan2.jpg" />
+    <Content Include="hinh\nh4_zing.jpg" />
+    <Content Include="hinh\nha-da-xe-lua-da-lat-1.jpg" />
+    <Content Include="hinh\nhatam.jpg" />
+    <Content Include="hinh\nhatrang.jpg" />
+    <Content Include="hinh\pay.png" />
+    <Content Include="hinh\saving.png" />
+    <Content Include="hinh\song-huong-duoi-cau-truong-tien.jpg" />
+    <Content Include="hinh\Sunrise Hanoi Hotel.jpg" />
+    <Content Include="hinh\Sunrise.jpg" />
+    <Content Include="hinh\sunrise_hotel.jpg" />
+    <Content Include="hinh\The Royal Hotel.jpg" />
+    <Content Include="hinh\The RoyalHotel.jpg" />
+    <Content Include="hinh\The RoyalHotel2room.jpg" />
+    <Content Include="hinh\The Royal_Hotel.jpg" />
+    <Content Include="hinh\tải xuống.jpg" />
+    <Content Include="hinh\van-mieu-quoc-tu-giam-o-dau.jpg" />
+    <Content Include="hinh\vesinh.jpg" />
+    <Content Include="HomePage_KS.aspx" />
+    <Content Include="js\bootstrap-datepicker.js" />
+    <Content Include="js\contact_me.js" />
+    <Content Include="js\custom-date-picker.js" />
+    <Content Include="js\custom-navigation.js" />
+    <Content Include="js\jqBootstrapValidation.js" />
+    <Content Include="LichDatPhong.aspx" />
+    <Content Include="login\css\main.css" />
+    <Content Include="login\css\util.css" />
+    <Content Include="login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="login\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="login\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="login\fonts\montserrat\OFL.txt" />
+    <Content Include="login\fonts\raleway\OFL.txt" />
+    <Content Include="login\fonts\ubuntu\UFL.txt" />
+    <Content Include="login\images\icons\favicon.ico" />
+    <Content Include="login\images\icons\icon-google.png" />
+    <Content Include="login\images\icons\map-marker.png" />
+    <Content Include="login\images\icons\symbol-01.png" />
+    <Content Include="login\js\main.js" />
+    <Content Include="login\vendor\animate\animate.css" />
+    <Content Include="login\vendor\animsition\css\animsition.css" />
+    <Content Include="login\vendor\animsition\css\animsition.min.css" />
+    <Content Include="login\vendor\animsition\js\animsition.js" />
+    <Content Include="login\vendor\animsition\js\animsition.min.js" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="login\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="login\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="login\vendor\bootstrap\js\popper.js" />
+    <Content Include="login\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="login\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="login\vendor\countdowntime\countdowntime.js" />
+    <Content Include="login\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="login\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="login\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="login\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="login\vendor\daterangepicker\moment.js" />
+    <Content Include="login\vendor\daterangepicker\moment.min.js" />
+    <Content Include="login\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="login\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="login\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="login\vendor\select2\select2.css" />
+    <Content Include="login\vendor\select2\select2.js" />
+    <Content Include="login\vendor\select2\select2.min.css" />
+    <Content Include="login\vendor\select2\select2.min.js" />
+    <Content Include="HomePage_DoiTac.aspx" />
+    <Content Include="ThemHinh_KhachSan.aspx" />
+    <Content Include="ThemPhong_KS.aspx" />
+    <Content Include="ThongTinTaiKhoan.aspx" />
+    <Content Include="Trang_ChiTietKhuVuc.aspx" />
+    <Content Include="Trang_DanhSachPhong.aspx" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\css\newcss.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\jquery\jquery.slim.js" />
+    <Content Include="vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XemHinhAnh.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CapNhat_DatPhong.aspx.cs">
+      <DependentUpon>CapNhat_DatPhong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapNhat_DatPhong.aspx.designer.cs">
+      <DependentUpon>CapNhat_DatPhong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connect.cs" />
+    <Compile Include="DangKy.aspx.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKy.aspx.designer.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangNhap.aspx.designer.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatPhongKS.aspx.cs">
+      <DependentUpon>DatPhongKS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatPhongKS.aspx.designer.cs">
+      <DependentUpon>DatPhongKS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoiMatKhau.aspx.cs">
+      <DependentUpon>DoiMatKhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.aspx.designer.cs">
+      <DependentUpon>DoiMatKhau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GioHang.aspx.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioHang.aspx.designer.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage_KS.aspx.cs">
+      <DependentUpon>HomePage_KS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage_KS.aspx.designer.cs">
+      <DependentUpon>HomePage_KS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LichDatPhong.aspx.cs">
+      <DependentUpon>LichDatPhong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LichDatPhong.aspx.designer.cs">
+      <DependentUpon>LichDatPhong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage_DoiTac.Master.cs">
+      <DependentUpon>MasterPage_DoiTac.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage_DoiTac.Master.designer.cs">
+      <DependentUpon>MasterPage_DoiTac.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage_KS.Master.cs">
+      <DependentUpon>MasterPage_KS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage_KS.Master.designer.cs">
+      <DependentUpon>MasterPage_KS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HomePage_DoiTac.aspx.cs">
+      <DependentUpon>HomePage_DoiTac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage_DoiTac.aspx.designer.cs">
+      <DependentUpon>HomePage_DoiTac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThemHinh_KhachSan.aspx.cs">
+      <DependentUpon>ThemHinh_KhachSan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThemHinh_KhachSan.aspx.designer.cs">
+      <DependentUpon>ThemHinh_KhachSan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThemPhong_KS.aspx.cs">
+      <DependentUpon>ThemPhong_KS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThemPhong_KS.aspx.designer.cs">
+      <DependentUpon>ThemPhong_KS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinTaiKhoan.aspx.cs">
+      <DependentUpon>ThongTinTaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongTinTaiKhoan.aspx.designer.cs">
+      <DependentUpon>ThongTinTaiKhoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trang_ChiTietKhuVuc.aspx.cs">
+      <DependentUpon>Trang_ChiTietKhuVuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trang_ChiTietKhuVuc.aspx.designer.cs">
+      <DependentUpon>Trang_ChiTietKhuVuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trang_DanhSachPhong.aspx.cs">
+      <DependentUpon>Trang_DanhSachPhong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trang_DanhSachPhong.aspx.designer.cs">
+      <DependentUpon>Trang_DanhSachPhong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XemHinhAnh.aspx.cs">
+      <DependentUpon>XemHinhAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XemHinhAnh.aspx.designer.cs">
+      <DependentUpon>XemHinhAnh.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage_KS.Master" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="vendor\jquery\jquery.min.map" />
+    <Content Include="vendor\jquery\jquery.slim.min.map" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="login\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="login\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="login\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-Black.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-BlackItalic.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-Bold.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-BoldItalic.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-ExtraBold.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-ExtraBoldItalic.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-ExtraLight.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-ExtraLightItalic.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-Italic.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-Light.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-LightItalic.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-Medium.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-MediumItalic.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-Regular.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-SemiBold.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-SemiBoldItalic.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-Thin.ttf" />
+    <Content Include="login\fonts\raleway\Raleway-ThinItalic.ttf" />
+    <Content Include="login\fonts\ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="login\fonts\ubuntu\Ubuntu-BoldItalic.ttf" />
+    <Content Include="login\fonts\ubuntu\Ubuntu-Italic.ttf" />
+    <Content Include="login\fonts\ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="login\fonts\ubuntu\Ubuntu-LightItalic.ttf" />
+    <Content Include="login\fonts\ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="login\fonts\ubuntu\Ubuntu-MediumItalic.ttf" />
+    <Content Include="login\fonts\ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="booking\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="booking\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="booking\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="booking\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="booking\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="booking\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="booking\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="booking\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="booking\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="MasterPage_DoiTac.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65171/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

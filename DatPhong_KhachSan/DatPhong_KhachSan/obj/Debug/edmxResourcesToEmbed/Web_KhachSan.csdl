@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_WebKhachSanModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="QL_WebKhachSanEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="DatPhongs" EntityType="QL_WebKhachSanModel.DatPhong" />
+    <EntitySet Name="DichVuDiKems" EntityType="QL_WebKhachSanModel.DichVuDiKem" />
+    <EntitySet Name="HinhAnhs" EntityType="QL_WebKhachSanModel.HinhAnh" />
+    <EntitySet Name="KhachSans" EntityType="QL_WebKhachSanModel.KhachSan" />
+    <EntitySet Name="KhuVucs" EntityType="QL_WebKhachSanModel.KhuVuc" />
+    <EntitySet Name="LoaiChoOs" EntityType="QL_WebKhachSanModel.LoaiChoO" />
+    <EntitySet Name="Phongs" EntityType="QL_WebKhachSanModel.Phong" />
+    <EntitySet Name="sysdiagrams" EntityType="QL_WebKhachSanModel.sysdiagram" />
+    <AssociationSet Name="FK_DatPhong_KhachSan" Association="QL_WebKhachSanModel.FK_DatPhong_KhachSan">
+      <End Role="KhachSan" EntitySet="KhachSans" />
+      <End Role="DatPhong" EntitySet="DatPhongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Phong_HinhAnh" Association="QL_WebKhachSanModel.FK_Phong_HinhAnh">
+      <End EntitySet="HinhAnhs" Role="HinhAnh" />
+      <End EntitySet="Phongs" Role="Phong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KhachSan_KhuVuc" Association="QL_WebKhachSanModel.FK_KhachSan_KhuVuc">
+      <End Role="KhuVuc" EntitySet="KhuVucs" />
+      <End Role="KhachSan" EntitySet="KhachSans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KhachSan_LoaiChoO" Association="QL_WebKhachSanModel.FK_KhachSan_LoaiChoO">
+      <End Role="LoaiChoO" EntitySet="LoaiChoOs" />
+      <End Role="KhachSan" EntitySet="KhachSans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Phong_KhachSan" Association="QL_WebKhachSanModel.FK_Phong_KhachSan">
+      <End EntitySet="KhachSans" Role="KhachSan" />
+      <End EntitySet="Phongs" Role="Phong" />
+    </AssociationSet>
+    <AssociationSet Name="ChiTiet_DichVu" Association="QL_WebKhachSanModel.ChiTiet_DichVu">
+      <End Role="DichVuDiKem" EntitySet="DichVuDiKems" />
+      <End Role="KhachSan" EntitySet="KhachSans" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DatPhong">
+    <Key>
+      <PropertyRef Name="MaDP" />
+    </Key>
+    <Property Name="MaDP" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="NgayNhanPhong" Type="DateTime" Precision="0" />
+    <Property Name="NgayTraPhong" Type="DateTime" Precision="0" />
+    <Property Name="SoTreEm" Type="Int32" />
+    <Property Name="SoNguoiLon" Type="Int32" />
+    <Property Name="SoPhong" Type="Int32" />
+    <Property Name="GhiChu" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TongTienDuKien" Type="Double" />
+    <Property Name="TenDN" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="MaKS" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="KhachSan" Relationship="QL_WebKhachSanModel.FK_DatPhong_KhachSan" FromRole="DatPhong" ToRole="KhachSan" />
+  </EntityType>
+  <EntityType Name="DichVuDiKem">
+    <Key>
+      <PropertyRef Name="MaDV" />
+    </Key>
+    <Property Name="MaDV" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TenDV" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="KhachSans" Relationship="QL_WebKhachSanModel.ChiTiet_DichVu" FromRole="DichVuDiKem" ToRole="KhachSan" />
+  </EntityType>
+  <EntityType Name="HinhAnh">
+    <Key>
+      <PropertyRef Name="MaHinh" />
+    </Key>
+    <Property Name="MaHinh" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Hinh" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Phongs" Relationship="QL_WebKhachSanModel.FK_Phong_HinhAnh" FromRole="HinhAnh" ToRole="Phong" />
+  </EntityType>
+  <EntityType Name="KhachSan">
+    <Key>
+      <PropertyRef Name="MaKhachSan" />
+    </Key>
+    <Property Name="MaKhachSan" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TenKhachSan" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="SDT" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="DanhGia" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="MaKV" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TenDN_QL" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="MaLoai" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="GiaThapNhat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="HinhAnhKS" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="DatPhongs" Relationship="QL_WebKhachSanModel.FK_DatPhong_KhachSan" FromRole="KhachSan" ToRole="DatPhong" />
+    <NavigationProperty Name="KhuVuc" Relationship="QL_WebKhachSanModel.FK_KhachSan_KhuVuc" FromRole="KhachSan" ToRole="KhuVuc" />
+    <NavigationProperty Name="LoaiChoO" Relationship="QL_WebKhachSanModel.FK_KhachSan_LoaiChoO" FromRole="KhachSan" ToRole="LoaiChoO" />
+    <NavigationProperty Name="Phongs" Relationship="QL_WebKhachSanModel.FK_Phong_KhachSan" FromRole="KhachSan" ToRole="Phong" />
+    <NavigationProperty Name="DichVuDiKems" Relationship="QL_WebKhachSanModel.ChiTiet_DichVu" FromRole="KhachSan" ToRole="DichVuDiKem" />
+  </EntityType>
+  <EntityType Name="KhuVuc">
+    <Key>
+      <PropertyRef Name="MaKhuVuc" />
+    </Key>
+    <Property Name="MaKhuVuc" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TenKhuVuc" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="KhachSans" Relationship="QL_WebKhachSanModel.FK_KhachSan_KhuVuc" FromRole="KhuVuc" ToRole="KhachSan" />
+  </EntityType>
+  <EntityType Name="LoaiChoO">
+    <Key>
+      <PropertyRef Name="MaLoaiChoO" />
+    </Key>
+    <Property Name="MaLoaiChoO" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TenLoai" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="KhachSans" Relationship="QL_WebKhachSanModel.FK_KhachSan_LoaiChoO" FromRole="LoaiChoO" ToRole="KhachSan" />
+  </EntityType>
+  <EntityType Name="Phong">
+    <Key>
+      <PropertyRef Name="MaPhong" />
+    </Key>
+    <Property Name="MaPhong" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="TenPhong" MaxLength="15" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="TrangThai" MaxLength="10" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="SoGiuong" Type="Int32" />
+    <Property Name="GiaPhong" Precision="19" Scale="4" Type="Decimal" />
+    <Property Name="MoTaPhong" MaxLength="100" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="MaHinh" MaxLength="10" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="MaKS" MaxLength="10" FixedLength="false" Unicode="false" Type="String" />
+    <NavigationProperty Name="HinhAnh" Relationship="QL_WebKhachSanModel.FK_Phong_HinhAnh" FromRole="Phong" ToRole="HinhAnh" />
+    <NavigationProperty Name="KhachSan" Relationship="QL_WebKhachSanModel.FK_Phong_KhachSan" FromRole="Phong" ToRole="KhachSan" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_DatPhong_KhachSan">
+    <End Role="KhachSan" Type="QL_WebKhachSanModel.KhachSan" Multiplicity="0..1" />
+    <End Role="DatPhong" Type="QL_WebKhachSanModel.DatPhong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachSan">
+        <PropertyRef Name="MaKhachSan" />
+      </Principal>
+      <Dependent Role="DatPhong">
+        <PropertyRef Name="MaKS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Phong_HinhAnh">
+    <End Type="QL_WebKhachSanModel.HinhAnh" Multiplicity="0..1" Role="HinhAnh" />
+    <End Type="QL_WebKhachSanModel.Phong" Multiplicity="*" Role="Phong" />
+    <ReferentialConstraint>
+      <Principal Role="HinhAnh">
+        <PropertyRef Name="MaHinh" />
+      </Principal>
+      <Dependent Role="Phong">
+        <PropertyRef Name="MaHinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KhachSan_KhuVuc">
+    <End Role="KhuVuc" Type="QL_WebKhachSanModel.KhuVuc" Multiplicity="0..1" />
+    <End Role="KhachSan" Type="QL_WebKhachSanModel.KhachSan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhuVuc">
+        <PropertyRef Name="MaKhuVuc" />
+      </Principal>
+      <Dependent Role="KhachSan">
+        <PropertyRef Name="MaKV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KhachSan_LoaiChoO">
+    <End Role="LoaiChoO" Type="QL_WebKhachSanModel.LoaiChoO" Multiplicity="0..1" />
+    <End Role="KhachSan" Type="QL_WebKhachSanModel.KhachSan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiChoO">
+        <PropertyRef Name="MaLoaiChoO" />
+      </Principal>
+      <Dependent Role="KhachSan">
+        <PropertyRef Name="MaLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Phong_KhachSan">
+    <End Type="QL_WebKhachSanModel.KhachSan" Multiplicity="0..1" Role="KhachSan" />
+    <End Type="QL_WebKhachSanModel.Phong" Multiplicity="*" Role="Phong" />
+    <ReferentialConstraint>
+      <Principal Role="KhachSan">
+        <PropertyRef Name="MaKhachSan" />
+      </Principal>
+      <Dependent Role="Phong">
+        <PropertyRef Name="MaKS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChiTiet_DichVu">
+    <End Role="DichVuDiKem" Type="QL_WebKhachSanModel.DichVuDiKem" Multiplicity="*" />
+    <End Role="KhachSan" Type="QL_WebKhachSanModel.KhachSan" Multiplicity="*" />
+  </Association>
+</Schema>

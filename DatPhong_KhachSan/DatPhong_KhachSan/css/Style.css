@@ -1,0 +1,118 @@
+.khungGioHang:hover {
+    border: 3px solid #ddc127;
+    background: #cfe9cd;
+}
+
+.reason-form p {
+	margin-left: 15px;
+}
+.Product_Image     
+{
+    width:50%;
+    float:left;
+}
+.optionBar {
+    margin-left:100px;
+}
+.Phong {
+    width:1100px;
+    height:150px;
+    margin:auto;    
+    font-size:18px; 
+    padding-left:3rem;
+}
+.Phong:hover {
+    border: 2px solid #ddc127;
+    background: #a1a0a0;
+}
+.PhongDong1 {
+    width:900px;
+    height:20px;
+    margin:auto;
+    float:left;
+}
+.PhongDong2 {
+    width:900px;
+    height:20px;
+    margin:auto;
+    float:left;    
+}
+.TenPhong {
+    width:250px;
+    height:20px;
+    margin:auto;
+    float:left;    
+}
+.TrangThai {
+    width:650px;
+    height:20px;
+    margin:auto;
+    float:left;    
+}
+.SoGiuong {
+    width:250px;
+    height:20px;
+    margin:auto;
+    float:left;    
+}
+.GiaPhong {
+    width:650px;
+    height:20px;
+    margin:auto;
+    float:left;    
+}
+.MoTa {
+    width:1100px;
+    height:auto;
+    margin:auto;    
+}
+#ds {
+text-align:center;
+color:#068d36;
+font-weight:bold;
+}
+.Nut {
+    width:195px;
+    height:50px;
+    float:left;
+    text-align:center;
+}
+.khungSearch {
+  padding: 2rem 3rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem; 
+  border-radius: 0.3rem;
+}
+.canchu-top-2 {
+ margin-top:2rem;
+}
+.canchu-bottom-2 {
+ margin-bottom:2rem;
+}
+.canchu-top-1 {
+ margin-top:1rem;
+}
+.canchu-bottom-1{
+ margin-bottom:1rem;
+}
+.canchu-top-bottom-2 {
+margin-bottom:2rem;
+margin-top:3rem;
+}
+.canchu-top-bottom-1 {
+margin-bottom:1rem;
+margin-top:1rem;
+}
+.canchu-left-2 {
+margin-left:2rem;
+}
+.canchu-right-2 {
+margin-right:2rem;
+}
+.canchu-left-right-2 {
+margin-left:2rem;
+margin-right:2rem;
+}
+.text-c {
+text-align:center !important;
+}

@@ -1,0 +1,17 @@
+C:\Users\Asus\Desktop\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\bin\DatPhong_KhachSan.dll
+C:\Users\Asus\Desktop\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\bin\DatPhong_KhachSan.pdb
+C:\Users\Asus\Desktop\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\obj\Debug\DatPhong_KhachSan.dll
+C:\Users\Asus\Desktop\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\obj\Debug\DatPhong_KhachSan.pdb
+C:\Users\Asus\Desktop\DoAn\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\bin\DatPhong_KhachSan.dll
+C:\Users\Asus\Desktop\DoAn\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\bin\DatPhong_KhachSan.pdb
+C:\Users\Asus\Desktop\DoAn\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\obj\Debug\DatPhong_KhachSan.dll
+C:\Users\Asus\Desktop\DoAn\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\obj\Debug\DatPhong_KhachSan.pdb
+C:\Users\Asus\Desktop\DoAn\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\obj\Debug\DatPhong_KhachSan.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Desktop\DoAn\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\bin\EntityFramework.dll
+C:\Users\Asus\Desktop\DoAn\Web\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\bin\EntityFramework.xml
+C:\Users\Asus\Desktop\DoAn\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\bin\DatPhong_KhachSan.dll
+C:\Users\Asus\Desktop\DoAn\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\bin\DatPhong_KhachSan.pdb
+C:\Users\Asus\Desktop\DoAn\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\bin\EntityFramework.xml
+C:\Users\Asus\Desktop\DoAn\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\obj\Debug\DatPhong_KhachSan.dll
+C:\Users\Asus\Desktop\DoAn\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\obj\Debug\DatPhong_KhachSan.pdb
+C:\Users\Asus\Desktop\DoAn\Web_KhachSan\DatPhong_KhachSan\DatPhong_KhachSan\obj\Debug\DatPhong_KhachSan.csprojResolveAssemblyReference.cache
