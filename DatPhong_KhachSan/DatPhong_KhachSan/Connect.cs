@@ -11,7 +11,7 @@ namespace DatPhong_KhachSan
     {
         public static SqlConnection GetDBConnection()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-FI63BATD;Initial Catalog=QL_WebKhachSan;User ID=sa;Password=phamvanhiep");
+            SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=QL_WebKhachSan;User ID=sa;Password=phamvanhiep");
             return conn;
         }
 
